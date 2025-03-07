@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Color Blast</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        .textbox {
+            width: 400px;
+            padding: 15px;
+            font-size: 18px;
+            background: #1c1c1c;
+            color: white;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            outline: none;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .blast {
+            animation: colorBlast 0.5s infinite alternate;
+        }
+
+        @keyframes colorBlast {
+            0% { border-color: red; color: red; box-shadow: 0 0 10px red; }
+            25% { border-color: blue; color: blue; box-shadow: 0 0 10px blue; }
+            50% { border-color: green; color: green; box-shadow: 0 0 10px green; }
+            75% { border-color: yellow; color: yellow; box-shadow: 0 0 10px yellow; }
+            100% { border-color: purple; color: purple; box-shadow: 0 0 10px purple; }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" class="textbox" id="inputBox" placeholder="Type to blast colors...">
+
+    <script>
+        const inputBox = document.getElementById("inputBox");
+
+        inputBox.addEventListener("input", () => {
+            if (inputBox.value.length > 0) {
+                inputBox.classList.add("blast"); // Add animation while typing
+            } else {
+                inputBox.classList.remove("blast"); // Remove animation when empty
+            }
+        });
+    </script>
+
+</body>
+</html>

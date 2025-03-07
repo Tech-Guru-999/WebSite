@@ -1,0 +1,6 @@
+p{
+	background: yellow;
+}
+p,h1{
+	color:blue;
+}

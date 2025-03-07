@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grid Layout</title>
+	<style type="text/css">
+		.container{
+			display: grid;
+		
+			grid-template-columns: 50px 50px 50px;
+			grid-template-rows: 50px 50px 50px ;
+			gap: 10px; /* applied for both columns and rows*/
+			grid-auto-flow: column;
+			justify-content: center;
+			align-content: center;
+			align-items:center;
+
+		}
+		.b1{
+			color:red;
+			background:url(images/img1.jpg);
+			background-size:100%;
+			border-radius: 5px;
+			border: 1px solid gray;
+		} 
+		.b2{
+			color:red;
+			background:url(images/img2.jpg);
+			background-size:100%;
+			border-radius: 5px;
+			border: 1px solid gray;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button class="b1">1</button>
+		<button class="b2">2</button>
+		<button>3</button>
+		<button class="b4">4</button>
+		<button>5</button>
+		<button>6</button>
+		<button>7</button>
+		<button>8</button>
+		<button>9</button>
+	</div>
+</body>
+</html>

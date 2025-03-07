@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loops</title>
+	<script type="text/javascript">
+	 	function  test(){
+	 		let colors=["red","blue","green","yellow","purple"]
+	 		/*
+	 		document.getElementsByTagName():
+	 				* Document Object Method
+	 				* Used to return reference of collection HTML elements
+	 				as specified tag Name.
+	 				
+	 				* using it, we can manipluate given element
+
+	 		document.getElementsByName() : 
+	 				* used to return reference of the collection of HTML elements which elements has common "name" attribute
+			*/
+	 		let  arr=document.getElementsByTagName("p");
+	 		for (var i = 0; i < arr.length; i++) {
+	 			arr[i].style.color=colors[i];
+	 		}
+	 	}
+
+
+	 </script>
+</head>
+<body>
+	<p>HTML</p>
+	<p>CSS</p>
+	<p>JavaScript</p>
+	<p>React</p>
+	<p>Angular</p>
+	<button onclick="test()">change</button>
+</body>
+</html>

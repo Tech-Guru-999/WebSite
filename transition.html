@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		 /*
+		 	selector{
+				transition: property-name  duration  timing-function  delay;
+				transform: transform-function(value);
+				animation: animation-name  duration  timing-function delay count;
+
+
+		 	}
+		 	rotate()
+		 	scale()
+		 	skew()
+		 	translate()
+
+		 	@keyframes  animation-name{
+				
+		 	}
+
+		 	*/
+		#one{
+			background-color:green;
+			height: 50px;
+			width:50px;
+			padding:10px;
+			transition: transform 0.5s ease;
+			animation: a1 10s linear infinite;
+			border-radius: 50;
+
+		}
+		@keyframes a1{
+			0%{
+				transform: rotate(0deg);
+				background-color: green;	
+			 
+			}100%{
+				transform: rotate(360deg);
+				background-color: red;
+
+			}
+
+			
+		}
+		#two{
+			padding-top:10px;
+			background-color:red;
+			height: 50px;
+			width:50px;
+			padding:10px;
+			transition: transform 0.5s ease-in;
+		}
+		#two:hover{
+			
+			transform: translate(30px);
+		}
+		#three{
+			background-color:blue;
+			height: 50px;
+			width:50px;
+			padding:10px;
+			transition: transform 0.5s ease-out;
+		}
+		#three:hover{
+		
+			transform: translate(10px);
+		}
+		#four{
+			background-color:gray;
+			height: 50px;
+			width:50px;
+			padding:10px;
+			transition: transform 0.5s linear;
+		}
+		#four:hover{
+			
+			transform: translate(5px);
+		}
+		#image{
+			position: absolute;
+			top:18px;
+			left:18px;
+			animation: a2 10s linear infinite;
+		}
+		@keyframes a2{
+			0%{
+				transform: rotate(360deg);
+				background-color: green;	
+			 
+			}100%{
+				transform: rotate(0deg);
+				background-color: red;
+
+			}
+	</style>
+</head>
+<body>
+
+	<div id="one">
+		
+	</div><img src="images/img4.jpg" height="50px" width="50px" style="border-radius: 50%;" id="image">
+
+	<div id="two">
+			
+	</div>
+	<div id="three">
+		
+	</div>
+	<div id="four">
+		
+	</div>
+</body>
+</html>
+

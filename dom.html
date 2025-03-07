@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		/*
+			HTML DOM -> Document Object Model
+					document -> web page what we see in browser
+					object -> components in web page(paragraph,image,etc)
+					Model -> structure of page (Hierarchy)-> root and childs
+
+										Root Element (<html>)
+												|
+
+						--------------------------------------------------
+						<head>										<body>
+						  |											   |
+						<title>										<p>	
+						<meta>										<img>
+						<script>									<h1>
+
+
+			document.getElementById()
+			document.getElementsByTagName()
+			document.getElementsByName()
+			document.getElementsByClassName()
+			document.querySelector() - to select one element
+			docuemnt.querySelectorAll()											
+		*/
+		function fun() {
+			let names=document.getElementsByClassName("one");
+
+			let  bgcolor=["cyan","magenta","yellow","black"]
+			let fcolor=["blue","green","tomato","white"]
+			for (var i = 0; i < names.length; i++) {
+				names[i].style.color=fcolor[i]; //apply font color
+				names[i].style.backgroundColor=bgcolor[i];//apply background color
+			}
+
+		}
+		function right(){
+			let img1=document.querySelector("img");
+			img1.style.position="relative";
+			img1.style.left="300px";
+		}
+		function left(){
+			let img1=document.querySelector("img");
+			img1.style.position="relative";
+			img1.style.left="0px";
+		}
+
+		function fun1() {
+			let names=document.querySelectorAll("h1");
+
+			let  bgcolor=["cyan","magenta","yellow","black"]
+			let fcolor=["blue","green","tomato","white"]
+			for (var i = 0; i < names.length; i++) {
+				names[i].style.color=fcolor[i]; //apply font color
+				names[i].style.backgroundColor=bgcolor[i];//apply background color
+			}
+
+		}
+	</script>
+	
+</head>
+<body>
+	 <h1 class="one">HTML</h1>
+	 <h2 class="one">CSS</h2>
+	 <h3 class="one">JavaScript</h3>
+	 <button onclick="fun1()">Change</button>
+	 <br>
+	 <img src="images/img1.jpg" height="100px" width="100px">
+	 <br>
+	 <h1 class="one">HTML</h1>
+	 <button onclick="right()">Right</button>
+	 <button onclick="left()">left</button>
+	 <h1 class="one">HTML</h1>
+	 <h1 class="one">HTML</h1>
+</body>
+</html>

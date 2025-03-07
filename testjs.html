@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function   printMyName( ){
+			var  user=document.getElementById('user').value
+			 document.getElementById('para').innerHTML=user;
+			 document.getElementById('para').style.color="blue";
+			 document.getElementById('para').style.backgroundColor="red";
+			 document.getElementById('user').value='';
+			 var  gender=document.querySelector("input[name='r1']").value;
+			 alert(gender);
+
+		}
+
+
+	</script>	 
+	<style type="text/css">
+		p{
+			width:100px;
+			border:1px solid green;
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<p id="para">TEXT</p>
+	<form> <input type="text" name="user" id="user">
+			<input type="radio" name="r1" value="female"> Female
+			<input type="radio" name="r1" value="male">Male
+		<input type="button" onclick="printMyName()" value="click">
+	</form>
+	 
+</body>
+</html>
+
+
